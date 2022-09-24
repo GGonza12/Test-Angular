@@ -9,12 +9,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let beer of beers" [ngClass]="{'discount':beer.discount}" >
             <td><img src="{{beer.image}}" alt="{{beer.name}}"></td>
             <td>{{beer.name}}</td>
             <td>{{beer.type}}</td>
-            <td>{{beer.price}}</td>
-            <td>{{beer.stock}}</td>
+            <td>{{beer.price | currency}}</td>
+            <td><span class="btn btn-warning"  *ngIf="beer.stock==0">Sin stock</span></td>
         </tr>
         <tr>
             <td>Red Red Wine</td>
