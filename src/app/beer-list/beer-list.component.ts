@@ -39,21 +39,9 @@ export class BeerListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  upQuantity(beer: Beer): void{
-    if(beer.quantity<beer.stock){
-      beer.quantity++;
-
-    }
-    }
-  downQuantity(beer: Beer): void{
-    if(beer.quantity>0){
-      beer.quantity--;
-
-    }
+  maxReached(m: string){
+    alert(m);
   }
-  ChangeQuantity(event: any,beer: Beer):void{
-    console.log(event.target);
- 
-  }
+
 
 }
